@@ -7,3 +7,4 @@ else{
     console.log ("su numero es impar");
 }
 
+/*busque como hacerlo por internet*/ 
