@@ -15,4 +15,3 @@ else if (UsuarioEdad >= 60 ){
 else{
     console.log("edad no valida");
 }
-
