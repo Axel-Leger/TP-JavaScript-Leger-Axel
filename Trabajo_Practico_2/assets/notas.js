@@ -4,8 +4,19 @@ let notaTrimestre3 = parseInt(prompt("ingrese la nota del tercer trimestre"));
 
 let promedio = Math.round((notaTrimestre1+notaTrimestre2+notaTrimestre3)/3)
 
-if (notaTrimestre1 <= 10 && notaTrimestre1 > 0 && notaTrimestre2 <= 10 && notaTrimestre2 > 0 && notaTrimestre3 <= 10 && notaTrimestre3 > 0){
-
+if(isNaN(notaTrimestre1) || isNaN(notaTrimestre2) || isNaN(notaTrimestre3)){
+    console.log("igrese una letra. ingrese la nota en numeros porfavor");
+}
+else if (notaTrimestre1 > 10 || notaTrimestre1 <= 0){
+    console.log("nota de primer trimestre es menor a 0 o mayor a 10")
+} 
+else if ( notaTrimestre2 > 10 || notaTrimestre2 <= 0){
+    console.log("nota del segundo trimestre es menor a 0 o mayor a 10");
+}
+else if ( notaTrimestre3 > 10 || notaTrimestre3 <= 0){
+    console.log_("nota del tercer trimieste es menor a 0 o mayor a 10");
+}
+else{
     if(promedio >= 1 && promedio <= 3){
         console.log('Nota Insuficiente');
     }
@@ -21,8 +32,4 @@ if (notaTrimestre1 <= 10 && notaTrimestre1 > 0 && notaTrimestre2 <= 10 && notaTr
     else if(promedio == 10 ){
         console.log('Nota Sobresaliente');
     }
-}
-else{
-    console.log("alguna de las tres notas no es una nota valida");
-    console.log("NOTAS VALIDAS: NUMERO MAYORES A 0 Y MENORES O IGUALES A 10");
 }
