@@ -4,16 +4,37 @@ let opcion =0 ;
 
 function AgregarTarea(tarea){
     tarea=prompt("que tarea quieres ingresar");
-    listaTarea.push(tarea);
-    alert("se añadio su tarea exitosamente");
+
+    if(tarea.trim() === ""){
+        alert("no puede estar la casilla vacia")
+    }
+    else if (tarea !== tarea.trim()){
+        alert("no puede contener espacion al principio ni al final")
+    }else{
+        alert("se añadio su tarea exitosamente");
+        listaTarea.push(tarea);
+    }
 }
+
 
 function editarTarea(editar){
 let TareaCambiar = prompt("que tarea quieres cambiar");
 let itareaCambiar= listaTarea.indexOf(TareaCambiar);
 let tareaNueva = prompt("Por cual tarea quieres cambiar");
 
-if(TareaCambiar == -1){
+if(TareaCambiar.trim() === ""){
+    alert("ERROR: no puede estar vacia la casilla")
+}
+else if(TareaCambiar !== TareaCambiar.trim()){
+    alert("ERROR: no puede tener espacios al principio ni al final")
+}
+else if (tareaNueva.trim() === ""){
+    alert("ERROR: no puede estar vacia la casilla")
+}
+else if (tareaNueva !== tareaNueva.trim()){
+    alert("ERROR: no puede tener espacios al principio ni al final")
+}
+else if(TareaCambiar == -1){
     alert("la tarea no se encontro")
 }else{
     listaTarea.splice(itareaCambiar ,1, tareaNueva)
@@ -30,7 +51,7 @@ function eliminarTarea(tarea){
     let index= listaTarea.indexOf(tarea);
     if(index !== -1){
         listaTarea.splice(index,1);
-        alert("tarea Eliminada");
+        alert("Tarea eliminada");
     }else{
         alert("tarea no encontrada");
     }
