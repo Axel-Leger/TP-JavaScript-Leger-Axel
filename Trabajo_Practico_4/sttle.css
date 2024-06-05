@@ -1,0 +1,12 @@
+.contenedor{
+    margin: 0px;
+}
+
+
+.imgEmoji{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
